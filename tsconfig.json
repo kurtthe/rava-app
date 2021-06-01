@@ -1,0 +1,24 @@
+{
+	"compilerOptions": {
+		"target": "esnext",
+		"module": "commonjs",
+		"lib": [
+			"es6",
+			"dom",
+			"dom.iterable"
+		],
+		"allowJs": true,
+		"jsx": "react",
+		"outDir": "./dist/",
+		"noEmit": false,
+		"isolatedModules": false ,
+		"strict": true,
+		"noImplicitAny": true,
+		"moduleResolution": "node",
+		"baseUrl": "./",
+		"allowSyntheticDefaultImports": true,
+		"esModuleInterop": true
+	},
+	"exclude": ["node_modules"],
+	"include": ["src/*", "src/config/settings.ts"]
+}
