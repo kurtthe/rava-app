@@ -38,7 +38,15 @@ module.exports = {
           'style-loader',
           'css-loader'
         ]
-      }
+      },
+      {
+        test: /\.(woff2?|ttf|otf|eot|svg)$/,
+        exclude: /node_modules/,
+        loader: 'file-loader',
+        options: {
+            name: '[path][name].[ext]'
+        }
+    }
     ]
   },
   devServer: {

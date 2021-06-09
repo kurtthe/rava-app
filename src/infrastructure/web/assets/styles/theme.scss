@@ -1,0 +1,12 @@
+$fonts_name: "Archivo", "Archivo-SemiBold";
+
+@each $family in $fonts_name {
+  @font-face {
+    font-family: $family;
+    src: url("../fonts/#{$family}.ttf") format("truetype");
+    font-display: swap;
+  }
+}
+
+$font_primary: "Archivo", sans-serif;
+$font_primary_semi: "Archivo-SemiBold", sans-serif;
