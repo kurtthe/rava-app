@@ -17,7 +17,11 @@
 		"moduleResolution": "node",
 		"baseUrl": "./",
 		"allowSyntheticDefaultImports": true,
-		"esModuleInterop": true
+		"esModuleInterop": true,
+		"paths": {
+      "@components": ["src/infrastructure/web/components/*"],
+      "@pages/*": ["src/infrastructure/web/pages/*"]
+    }
 	},
 	"exclude": ["node_modules"],
 	"include": ["src/*", "src/config/settings.ts"]
