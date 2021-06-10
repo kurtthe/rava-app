@@ -7,6 +7,9 @@
 			"dom",
 			"dom.iterable"
 		],
+    "sourceMap": true,
+    "experimentalDecorators": true,
+    "importHelpers": true,
 		"allowJs": true,
 		"jsx": "react",
 		"outDir": "./dist/",

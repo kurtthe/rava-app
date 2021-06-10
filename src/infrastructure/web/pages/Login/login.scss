@@ -1,11 +1,28 @@
 .login{
   padding: 20px;
-  background-color: rebeccapurple;
   display: flex;
   flex-direction: column;
+  justify-content:center;
+  margin: auto;
+  width: 30vw;
 
-  & .login__form{
+  &__title{
+    margin-bottom: 15px;
+  }
+  
+  &__form{
+    margin-top: 10px;
     display: flex;
     flex-direction:column
+  }
+}
+
+.image_preview{
+  height:100vh;
+  width: 50vw;
+  padding:0px;
+  img {
+    width: 100%;
+    height: 100%;
   }
 }

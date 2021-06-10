@@ -1,24 +1,35 @@
-import React from 'react';
-
+import React from "react";
+import { FontAwesome } from "react-web-vector-icons";
 interface Props {
-  label:string
-  value:string
-  typeInput: "text" | "password"
-  onChange: ()=> void
+  label: string;
+  value: string;
+  icon?: string | undefined;
+  typeInput?: "text" | "password";
+  onChange: () => void;
 }
 
+const TextInput = (props: Props) => {
+  const putContent = () => {
+    if (!props.icon) {
+      return <input type={!props.typeInput ? "text" : props.typeInput} />;
+    }
 
-const TextInput = (props:Props)=>{
+    return (
+      <div className="textinput__icon">
+        <FontAwesome name={props.icon} color="white" size={20} />
+        <input type={!props.typeInput ? "text" : props.typeInput} />
+      </div>
+    );
+  };
+
   return (
     <>
-      <div>
-        <label htmlFor="">
-          {props.label}
-        </label>
-        <input type={props.typeInput} />
+      <div className="textinput">
+        <label htmlFor="">{props.label}</label>
+        {putContent()}
       </div>
     </>
-  )
-}
+  );
+};
 
-export default TextInput
+export default TextInput;

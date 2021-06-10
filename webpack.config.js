@@ -46,7 +46,14 @@ module.exports = {
         options: {
             name: '[path][name].[ext]'
         }
+    },
+    {
+      test: /\.(png|svg|jpg|jpeg|gif)$/i,
+      loader: 'file-loader',
+      options: {
+        name: '[hash].[ext]'
     }
+    },
     ]
   },
   devServer: {
