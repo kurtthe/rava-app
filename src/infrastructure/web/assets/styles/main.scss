@@ -48,13 +48,19 @@ h2 {
   font-size: 18px;
 }
 
-input{
+p {
+  font-family: $font_primary;
+  color: $color_paragraph;
+  font-size: 18px;
+}
+
+input {
   border: none;
-  padding:15px;
+  padding: 15px;
   margin: 10px 0px;
   font-family: $font_primary;
   font-size: 16px;
-  font-weight:400;
+  font-weight: 400;
   border-radius: 16px;
   background-color: $bg_color_textinput;
   color: $color_textinput;
@@ -67,30 +73,30 @@ label {
   margin: 5px;
 }
 
-.textinput{
+.textinput {
   display: flex;
   flex-direction: column;
   justify-content: center;
   padding: 5px 0px;
   margin: 5px 0px;
 
-  &__icon{
-    display:flex;
-    flex-direction:row;
-    align-items:center;
+  &__icon {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
     background-color: $bg_color_textinput;
     border-radius: 16px;
     padding-left: 15px;
 
-    & input{
+    & input {
       margin-left: 5px;
       padding: 10px;
       width: 80%;
     }
   }
 
-  & label{
-    margin-left: 10px
+  & label {
+    margin-left: 10px;
   }
 }
 
@@ -150,7 +156,7 @@ label {
   justify-content: space-between;
 }
 
-.link{
+.link {
   text-decoration: none;
   font-family: $font_primary;
   font-size: 16px;
@@ -158,20 +164,20 @@ label {
   margin: 8px 0px;
 }
 
-.h-full{
-  height:100vh;
+.h-full {
+  height: 100vh;
 }
 
-.w-full{
-  width:100vw;
+.w-full {
+  width: 100vw;
 }
 
-.full-screen{
-  height:100vh;
-  width:100vw;
+.full-screen {
+  height: 100vh;
+  width: 100vw;
 }
 
-.overflow-none{
+.overflow-none {
   overflow: hidden;
 }
 
@@ -179,27 +185,40 @@ label {
   @extend %btn;
   background-color: $color_primary_btn;
 }
-
-.t-a-right{
+// texts
+.t-a-right {
   text-align: right;
 }
+.t-a-center {
+  text-align: center;
+}
 
-.mt-12{
+// texts colors
+.color-primary {
+  color: $color_primary_paragraph;
+}
+
+// margins
+.mt-12 {
   margin-top: 3rem;
 }
-.mt-14{
+.mt-14 {
   margin-top: 3.5rem;
 }
-.mt-16{
-  margin-top: 4rem;;
+.mt-16 {
+  margin-top: 4rem;
 }
-.mt-20{
+.mt-20 {
   margin-top: 5rem;
 }
-.mt-24{
-  margin-top:6rem;
+.mt-24 {
+  margin-top: 6rem;
 }
-.mt-28{
-  margin-top:7rem;
+.mt-28 {
+  margin-top: 7rem;
 }
 
+.mx-2 {
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+}
