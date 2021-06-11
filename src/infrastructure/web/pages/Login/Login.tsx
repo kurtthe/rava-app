@@ -2,6 +2,8 @@ import React from "react";
 import TextInput from "../../components/TextInput";
 import Button from "../../components/Button";
 
+import { Link } from 'react-router-dom';
+
 import Logo from "../../assets/img/logo.png";
 import ImageRigth from "../../assets/img/bg_login.png";
 
@@ -20,7 +22,10 @@ const Login = () => {
             <div className="login__form">
               <TextInput label="Email" onChange={() => null} value="" icon="user-o" />
               <TextInput label="Password" onChange={() => null} typeInput="password" value="" icon="lock"  />
-              <Button label="Login" onClick={() => null} type="primary" />
+              <Link to="" className="link t-a-right"> 
+                Forgot Password?
+              </Link>
+              <Button className="mt-12" label="Login" onClick={() => null} type="primary" />
             </div>
           </div>
           <div className="image_preview">

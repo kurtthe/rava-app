@@ -5,13 +5,14 @@ interface Props{
  disabled?: boolean
  label: string
  onClick: (event?:any)=>void
+ className?: string
 }
 
 const Button = (props:Props)=>{
 
   return (
     <>
-      <button className={`btn-${props.type}`}>
+      <button className={`btn-${props.type} ${(props.className) && props.className}` }>
         {props.label || 'Button'}
       </button>
     </>
