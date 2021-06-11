@@ -5,17 +5,13 @@
 }
 
 %btn {
-  padding: 10px;
+  padding: 12px;
   font-family: $font_primary;
   font-size: 20px;
   text-transform: uppercase;
   color: $color_label_btn_default;
   border: none;
   border-radius: 5px;
-  -webkit-box-shadow: 2px 2px 2px 0px rgba(0, 0, 0, 0.75);
-  -moz-box-shadow: 2px 2px 2px 0px rgba(0, 0, 0, 0.75);
-  box-shadow: 2px 2px 2px 0px rgba(0, 0, 0, 0.75);
-  margin: 10px 0px;
   &:hover {
     cursor: pointer;
   }
@@ -193,6 +189,12 @@ label {
   text-align: center;
 }
 
+// font-sizes
+.text-xs {
+  font-size: 0.75rem;
+  line-height: 1rem;
+}
+
 // texts colors
 .color-primary {
   color: $color_primary_paragraph;
@@ -221,4 +223,11 @@ label {
 .mx-2 {
   margin-left: 0.5rem;
   margin-right: 0.5rem;
+}
+
+.mt-2 {
+  margin-top: 0.5rem;
+}
+.mb-6 {
+  margin-bottom: 1.5rem;
 }

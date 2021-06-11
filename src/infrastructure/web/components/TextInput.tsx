@@ -5,19 +5,21 @@ interface Props {
   value: string;
   icon?: string | undefined;
   typeInput?: "text" | "password";
+  placeholder?: string
+  helperText?:string
   onChange: () => void;
 }
 
 const TextInput = (props: Props) => {
   const putContent = () => {
     if (!props.icon) {
-      return <input type={!props.typeInput ? "text" : props.typeInput} />;
+      return <input type={!props.typeInput ? "text" : props.typeInput} placeholder={props.placeholder} />;
     }
 
     return (
       <div className="textinput__icon">
         <FontAwesome name={props.icon} color="white" size={20} />
-        <input type={!props.typeInput ? "text" : props.typeInput} />
+        <input type={!props.typeInput ? "text" : props.typeInput} placeholder={props.placeholder} />
       </div>
     );
   };
@@ -27,6 +29,9 @@ const TextInput = (props: Props) => {
       <div className="textinput">
         <label htmlFor="">{props.label}</label>
         {putContent()}
+        <p className="text-xs">
+          {props.helperText}
+        </p>
       </div>
     </>
   );
