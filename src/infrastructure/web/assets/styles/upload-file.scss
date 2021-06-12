@@ -1,0 +1,63 @@
+@import "./theme.scss";
+
+%style_text {
+  font-size: 18px;
+  line-height: 0px;
+  text-align: justify;
+}
+
+.upload {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 70%;
+  padding: 5px;
+
+  &__image {
+    img {
+      border-radius: 50%;
+    }
+  }
+
+  &__title {
+    @extend %style_text;
+    color: #fff;
+  }
+
+  &__details {
+    @extend %style_text;
+    color: #7d7e93;
+  }
+
+  &__btn{
+    background-color: $color_primary_btn;
+    padding:8px 15px;
+    border: none;
+    border-radius: 18px;
+    color: #1F2044;
+    font-size: 18px;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content:space-between;
+    
+    &:hover{
+      cursor: pointer;
+    }
+  }
+
+  &__content{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content:flex-start;
+
+  }
+}
+
+input[type="file"] {
+  background-color: green;
+  display: none;
+}

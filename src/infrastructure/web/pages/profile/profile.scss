@@ -1,0 +1,16 @@
+.profile{
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content:center;
+  margin: auto;
+  width: 30vw;
+
+  &__content{
+    margin-top: 10px;
+    width:100%;
+    display: flex;
+    flex-direction:column;
+  }
+  
+}
