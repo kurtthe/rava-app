@@ -4,16 +4,22 @@ interface Props {
   label: string;
   value: string;
   icon?: string | undefined;
-  typeInput?: "text" | "password";
-  placeholder?: string
-  helperText?:string
+  typeInput?: "text" | "password" | "multiline";
+  placeholder?: string;
+  helperText?: string;
   onChange: () => void;
 }
 
 const TextInput = (props: Props) => {
   const putContent = () => {
+    if (props.typeInput == "multiline") {
+      return <textarea placeholder={props.placeholder}></textarea>;
+    }
+
     if (!props.icon) {
-      return <input type={!props.typeInput ? "text" : props.typeInput} placeholder={props.placeholder} />;
+      return (
+        <input type={!props.typeInput ? "text" : props.typeInput} placeholder={props.placeholder} />
+      );
     }
 
     return (
@@ -29,9 +35,7 @@ const TextInput = (props: Props) => {
       <div className="textinput">
         <label htmlFor="">{props.label}</label>
         {putContent()}
-        <p className="text-xs">
-          {props.helperText}
-        </p>
+        <p className="text-xs">{props.helperText}</p>
       </div>
     </>
   );

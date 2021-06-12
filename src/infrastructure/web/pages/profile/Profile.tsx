@@ -3,6 +3,8 @@ import React from "react";
 import Layout from "../../components/Layout";
 import HeaderMini from "../../components/HeaderMini";
 import UploadFile from "../../components/UploadFile";
+import TextInput from "../../components/TextInput";
+import Button from "../../components/Button";
 
 import ImageRigth from "../../assets/img/bg_signup.png";
 
@@ -30,6 +32,16 @@ const Profile = (props: Props) => {
               titleInfo="Add your cover photo"
               detailsInfo="Add cover photo for Trainer Account (min. 2mb)"
             />
+
+            <TextInput
+              label="Bio"
+              onChange={() => null}
+              value=""
+              placeholder="Enter your bio"
+              typeInput="multiline"
+            />
+
+            <Button className="mt-12" label="Complete" onClick={() => null} type="primary" />
           </div>
         </div>
       </Layout>
