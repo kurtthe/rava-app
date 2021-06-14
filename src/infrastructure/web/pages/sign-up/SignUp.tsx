@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 import Layout from "../../components/Layout";
 import HeaderMini from "../../components/HeaderMini";
@@ -46,8 +47,9 @@ const SignUp = (props: Props) => {
               placeholder="Enter your password"
               helperText="Your password must be 6-12 characters"
             />
-
-            <Button className="mt-12" label="Create account" onClick={() => null} type="primary" />
+            <Link to="/complete-profile" className="sign-up__link">
+              <Button className="mt-12" label="Create account" onClick={() => null} type="primary" />
+            </Link>
           </div>
         </div>
       </Layout>
