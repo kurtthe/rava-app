@@ -18,9 +18,15 @@ const Login = () => {
       <Layout imageRigth={ImageRigth}>
         <div className="login">
           <HeaderMini description="Welcome Trainer, Please login first to enter the editing rooms." />
-          
+
           <div className="login__form">
-            <TextInput label="Email" onChange={() => null} value="" icon="user-o" placeholder="Enter your email" />
+            <TextInput
+              label="Email"
+              onChange={() => null}
+              value=""
+              icon="user-o"
+              placeholder="Enter your email"
+            />
             <TextInput
               label="Password"
               onChange={() => null}
@@ -29,7 +35,7 @@ const Login = () => {
               icon="lock"
               placeholder="Enter your password"
             />
-            <Link to="" className="link t-a-right">
+            <Link to="/forget-password" className="link t-a-right leading-0">
               Forgot Password?
             </Link>
             <Button className="mt-12" label="Login" onClick={() => null} type="primary" />
