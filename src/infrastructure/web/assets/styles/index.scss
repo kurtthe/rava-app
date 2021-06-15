@@ -1,0 +1,24 @@
+// generic
+@import "generic/normalize.scss";
+@import "generic/box-sizing.scss";
+
+// settings
+@import "settings/colors.scss";
+@import "settings/typography.scss";
+
+// elements
+@import "elements/body.scss";
+@import "elements/textinput.scss";
+@import "elements/typography.scss";
+
+// components
+@import "components/layout.scss";
+@import "components/upload-file.scss";
+
+// utilities
+@import "utilities/buttons.scss";
+@import "utilities/flexbox.scss";
+@import "utilities/overflow.scss";
+@import "utilities/size.scss";
+@import "utilities/textinput.scss";
+@import "utilities/typography.scss";

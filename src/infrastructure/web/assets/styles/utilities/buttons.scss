@@ -1,0 +1,17 @@
+%btn {
+  padding: 12px;
+  font-family: $font_primary;
+  font-size: 20px;
+  text-transform: uppercase;
+  color: $color_label_btn_default;
+  border: none;
+  border-radius: 5px;
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.btn-primary {
+  @extend %btn;
+  background-color: $color_primary_btn;
+}

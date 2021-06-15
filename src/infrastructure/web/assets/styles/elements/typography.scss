@@ -1,0 +1,17 @@
+h2 {
+  color: $color_secondary;
+  font-size: 18px;
+}
+
+p {
+  font-family: $font_primary;
+  color: $color_paragraph;
+  font-size: 18px;
+}
+
+label {
+  font-family: $font_primary;
+  font-size: 18px;
+  color: $color_label_textinput;
+  margin: 5px;
+}
