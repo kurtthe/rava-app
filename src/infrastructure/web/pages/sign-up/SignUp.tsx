@@ -48,7 +48,7 @@ const SignUp = (props: Props) => {
               helperText="Your password must be 6-12 characters"
             />
             <Link to="/complete-profile" className="sign-up__link">
-              <Button className="mt-12" label="Create account" onClick={() => null} type="primary" />
+              <Button mode="contained" className="mt-12" label="Create account" onClick={() => null} type="primary" />
             </Link>
           </div>
         </div>

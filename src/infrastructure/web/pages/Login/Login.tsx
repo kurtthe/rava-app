@@ -38,7 +38,7 @@ const Login = () => {
             <Link to="/forget-password" className="link t-a-right leading-0">
               Forgot Password?
             </Link>
-            <Button className="mt-12" label="Login" onClick={() => null} type="primary" />
+            <Button mode="contained" className="mt-12" label="Login" onClick={() => null} type="primary" />
           </div>
           <div className="login__footer">
             <p className="t-a-center">

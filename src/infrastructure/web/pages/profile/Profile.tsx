@@ -41,7 +41,7 @@ const Profile = (props: Props) => {
               typeInput="multiline"
             />
 
-            <Button className="mt-12" label="Complete" onClick={() => null} type="primary" />
+            <Button mode="contained" className="mt-2" label="Complete" onClick={() => null} type="primary" />
           </div>
         </div>
       </Layout>

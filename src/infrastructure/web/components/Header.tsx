@@ -20,7 +20,7 @@ const Header = () => {
           </ul>
         </div>
         <div className="header__profile">
-          <Button label="Create new project" onClick={() => null} type="primary" />
+          <Button mode="outline" label="Create new project" onClick={() => null} type="secondary" />
 
           <img src={Profile} alt="Image Profile" width="40px" height="40px"/>
         </div>

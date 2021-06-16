@@ -11,7 +11,35 @@
   }
 }
 
-.btn-primary {
+%btn_outline{
+  padding: 5px 10px;
+  font-size: 18px;
+  background-color: transparent;
+  border-radius: 20px;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+// contained
+.btn-contained-primary {
   @extend %btn;
   background-color: $color_primary_btn;
+}
+.btn-contained-secondary {
+  @extend %btn;
+  background-color: $color_primary_btn;
+}
+
+// outlines
+.btn-outline-primary {
+  @extend %btn_outline;
+  color: $color_primary_btn;
+  border: 1.5px solid $color_primary_btn;
+}
+
+.btn-outline-secondary {
+  @extend %btn_outline;
+  border: 1.5px solid $color_secondary_btn;
+  color: $color_secondary_btn;
 }
