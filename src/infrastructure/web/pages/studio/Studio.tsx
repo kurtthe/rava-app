@@ -2,9 +2,9 @@ import React from "react";
 
 import Header from "../../components/Header";
 
-import ContentVideo from "../../components/ContentVideo";
-import Tools from "../../components/ContentTools";
-import ContentTimeline from "../../components/ContentTimeline";
+import ContentVideo from "./components/ContentVideo";
+import Tools from "./components/ContentTools";
+import ContentTimeline from "./components/ContentTimeline";
 
 import "./studio.scss";
 
