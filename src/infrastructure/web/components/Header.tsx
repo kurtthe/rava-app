@@ -7,22 +7,24 @@ const Header = () => {
   return (
     <>
       <div className="header">
-        <div className="header__logo">
-          <img src={Logo} alt="Logo Rava" />
-        </div>
         <div className="header__content">
-          <ul>
-            <li>Recent project</li>
-            <li>Undo</li>
-            <li>Redo</li>
-            <li>Save</li>
-            <li>Save as</li>
-          </ul>
+          <div className="header__logo">
+            <img src={Logo} alt="Logo Rava" />
+          </div>
+          <div className="header__content__list">
+            <ul>
+              <li>Recent project</li>
+              <li>Undo</li>
+              <li>Redo</li>
+              <li>Save</li>
+              <li>Save as</li>
+            </ul>
+          </div>
         </div>
         <div className="header__profile">
-          <Button mode="outline" label="Create new project" onClick={() => null} type="secondary" />
+          <Button mode="outline" label="Create new project" onClick={() => null} type="secondary" className="mx-2" />
 
-          <img src={Profile} alt="Image Profile" width="40px" height="40px"/>
+          <img src={Profile} alt="Image Profile" width="40px" height="40px" />
         </div>
       </div>
     </>
