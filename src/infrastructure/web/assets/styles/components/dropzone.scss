@@ -1,0 +1,17 @@
+.dropzone{
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  &__icon{
+    border-radius: 5px;
+    border: 1.5px dashed #fff;
+    padding: 20px;
+  }
+
+  p{
+    color: #fff !important;
+  }
+}

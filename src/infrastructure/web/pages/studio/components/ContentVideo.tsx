@@ -1,10 +1,12 @@
 import React from "react";
 
+import DropZone from "../../../components/DropZone"
+
 const ContentVideo = (props) => {
   return (
     <>
       <div className="content-video">
-        <p>content video</p>
+        <DropZone />
       </div>
     </>
   );
