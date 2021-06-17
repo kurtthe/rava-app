@@ -20,7 +20,7 @@ const Profile = (props: Props) => {
           <HeaderMini description="Hey Mate, Welcome! Please complete your profile picture to continue to login" />
           <div className="profile__content">
             <UploadFile
-              type="simple"
+              type="preview"
               label="Upload picture"
               titleInfo="Add your profile photo"
               detailsInfo="Add your photo for Trainer Account"

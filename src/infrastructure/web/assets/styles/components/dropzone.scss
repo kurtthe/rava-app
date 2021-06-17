@@ -4,22 +4,19 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  height: $height_container_studio;
+  &:hover{
+    cursor: pointer;
+  }
  
 
   &__icon{
     border-radius: 5px;
     border: 1.5px dashed #fff;
     padding: 20px;
-
-    &:hover{
-      cursor: pointer;
-    }
   }
 
   p{
     color: #fff !important;
-    &:hover{
-      cursor: pointer;
-    }
   }
 }

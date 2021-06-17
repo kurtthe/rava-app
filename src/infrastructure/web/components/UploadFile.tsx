@@ -6,7 +6,7 @@ import ProfileCover from "../assets/img/profile-cover.png";
 import { AntDesign } from "react-web-vector-icons";
 
 interface Props {
-  type: "simple" | "cover";
+  type: "basic" | "cover" | "preview";
   label: string;
   titleInfo?: string;
   detailsInfo?: string;
@@ -23,7 +23,7 @@ const UploadFile = (props: Props) => {
     }
   };
 
-  const handleChangeFile = (event) => {
+  const handleChangeFile = (event: any) => {
     const urlImage = URL.createObjectURL(event.target.files[0]);
 
     console.log("event.target.files", urlImage);
@@ -33,7 +33,20 @@ const UploadFile = (props: Props) => {
   };
 
   const putContent = () => {
-    if (props.type == "simple") {
+    if (props.type === "basic") {
+      return (
+        <>
+          <input ref={hiddenFileInput} type="file" onChange={handleChangeFile} />
+
+          <button onClick={handleClick} className={`upload-${props.type}__btn`}>
+            <AntDesign name="plus" color="#1F2044" size={20} />
+            {props.label}
+          </button>
+        </>
+      );
+    }
+
+    if (props.type === "preview") {
       return (
         <>
           <div className={`upload-${props.type}__image`}>

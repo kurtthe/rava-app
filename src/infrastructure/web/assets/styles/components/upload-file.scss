@@ -27,7 +27,13 @@ input[type="file"] {
   display: none;
 }
 
-.upload-simple {
+.upload-basic {
+  &__btn{
+    @extend %btn_upload;
+  }
+}
+
+.upload-preview {
   display: flex;
   flex-direction: row;
   align-items: center;
