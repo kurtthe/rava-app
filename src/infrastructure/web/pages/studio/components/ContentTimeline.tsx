@@ -3,7 +3,7 @@ import React from "react";
 const ContentTimeLine = () => {
   return (
   <>
-  <div>
+  <div className="timeline">
     <p>time line</p>
   </div>
   </>

@@ -10,14 +10,15 @@ const Tools = (props: any) => {
     <>
       <div className="content-tools">
         <Tabs>
-          <div label="Export">
-            <Export />
-          </div>
+          
           <div label="Timer">
             <Timer />
           </div>
           <div label="Audio">
             See ya later, <em>Audio</em>!
+          </div>
+          <div label="Export">
+            <Export />
           </div>
         </Tabs>
       </div>
