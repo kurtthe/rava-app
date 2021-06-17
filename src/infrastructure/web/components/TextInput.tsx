@@ -7,6 +7,7 @@ interface Props {
   typeInput?: "text" | "password" | "multiline";
   placeholder?: string;
   helperText?: string;
+  compact?: false | boolean;
   onChange: () => void;
 }
 
@@ -32,7 +33,7 @@ const TextInput = (props: Props) => {
 
   return (
     <>
-      <div className="textinput">
+      <div className={!props.compact ? "textinput" : "textinput-compact"}>
         <label htmlFor="">{props.label}</label>
         {putContent()}
         <p className="text-xs">{props.helperText}</p>

@@ -8,6 +8,7 @@ input {
   border-radius: 16px;
   background-color: $bg_color_textinput;
   color: $color_textinput;
+  border: 1px solid $color_textinput_border;
 }
 
 textarea{

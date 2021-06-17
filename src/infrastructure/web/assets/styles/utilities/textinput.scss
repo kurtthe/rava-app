@@ -22,3 +22,18 @@
     margin-left: 10px;
   }
 }
+
+.textinput-compact {
+  display: flex;
+  flex-direction: column;
+  & label {
+    margin-left: 2px;
+  }
+
+  & input {
+    margin:2px;
+    padding: 8px;
+    width: 40%;
+    border-radius:3px
+  }
+}

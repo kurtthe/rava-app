@@ -1,0 +1,40 @@
+.export{
+  padding: 15px 5px;
+  & select{
+    background-color: transparent;
+    color: $color_paragraph;
+    margin-top: 5px;
+    margin-bottom: 20px;
+  }
+
+  & input{
+    background-color: transparent;
+    color: $color_paragraph;
+    width: 90% !important;
+  }
+
+  & label{
+    font-size: 14px;
+  }
+
+  &__content{
+    padding: 2px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 100%;
+
+    
+    &-inputgroup{
+      width: 100% !important;
+      margin: 7px 0px;
+
+      display:flex;
+      flex-direction:row;
+      align-items: center;
+      justify-content:space-between;
+
+    }
+  }
+  
+}
