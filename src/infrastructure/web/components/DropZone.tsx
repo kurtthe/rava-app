@@ -3,7 +3,6 @@ import { useDropzone } from "react-dropzone";
 
 import { FontAwesome } from "react-web-vector-icons";
 
-
 const DropZone = () => {
   const { acceptedFiles, getRootProps, getInputProps } = useDropzone();
 
@@ -15,13 +14,10 @@ const DropZone = () => {
 
   return (
     <div className="dropzone">
-
-      
       <div {...getRootProps({ className: "dropzone" })}>
-      <div className="dropzone__icon">
-      <FontAwesome name="plus" color="white" size={30} />
-
-      </div>
+        <div className="dropzone__icon">
+          <FontAwesome name="plus" color="white" size={30} />
+        </div>
         <input {...getInputProps()} />
         <p>drag & drop footage or Open previous project to Editing the video</p>
       </div>

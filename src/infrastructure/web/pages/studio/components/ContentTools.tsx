@@ -1,10 +1,22 @@
 import React from "react";
 
-const Tools = (props) => {
+import Tabs from "../../../components/Tabs";
+
+const Tools = (props:any) => {
   return (
     <>
       <div className="content-tools">
-        <p>tools</p>
+        <Tabs>
+          <div label="Timer">
+            See ya later, <em>Timer</em>!
+          </div>
+          <div label="Audio">
+            See ya later, <em>Audio</em>!
+          </div>
+          <div label="Export">
+            See ya later, <em>Export</em>!
+          </div>
+        </Tabs>
       </div>
     </>
   );
