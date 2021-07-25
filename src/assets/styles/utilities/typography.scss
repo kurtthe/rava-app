@@ -1,0 +1,33 @@
+// texts
+.t-a-right {
+  text-align: right;
+}
+.t-a-center {
+  text-align: center;
+}
+
+// font-sizes
+.text-xs {
+  font-size: 0.75rem;
+  line-height: 1rem;
+}
+
+// texts colors
+.color-primary {
+  color: $color_primary_paragraph !important;
+}
+
+
+.link {
+  text-decoration: none;
+  font-family: $font_primary !important;
+  font-size: 16px !important;
+  color: $color_label_textinput;
+}
+
+// text line height
+
+.leading-0{
+  line-height: 0px !important;
+}
+

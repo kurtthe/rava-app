@@ -1,0 +1,22 @@
+.dropzone{
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: $height_container_studio/1.5;
+  &:hover{
+    cursor: pointer;
+  }
+ 
+
+  &__icon{
+    border-radius: 5px;
+    border: 1.5px dashed #fff;
+    padding: 20px;
+  }
+
+  p{
+    color: #fff !important;
+  }
+}

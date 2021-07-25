@@ -1,0 +1,15 @@
+select{
+  width: 100%;
+  padding: 8px;
+  background-color: $bg_color_textinput;
+  border-radius: 5px;
+  border: 1px solid $color_textinput_border;
+  font-family: $font_primary;
+  color: $color_textinput;
+  font-size: 16px;
+  margin: 5px 0px;
+
+  &:hover{
+    cursor: pointer;
+  }
+}

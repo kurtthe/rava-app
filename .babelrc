@@ -1,0 +1,29 @@
+{
+  "presets": [
+    "@babel/preset-env",
+    "@babel/preset-typescript",
+    "@babel/preset-react"
+  ],
+  "plugins": [
+    "@babel/plugin-proposal-class-properties",
+    "@babel/plugin-transform-typescript",
+    "@babel/plugin-transform-arrow-functions",
+    "@babel/plugin-transform-classes",
+    "@babel/plugin-proposal-object-rest-spread",
+    "@babel/plugin-syntax-typescript",
+    ["module-resolver", {
+      "root": ["./src"],
+      "alias": {
+        "@env": "./src/environments",
+        "@custom-elements": "./src/app/custom-elements",
+        "@custom-sections": "./src/app/custom-sections",
+        "@pages": "./src/app/pages",
+        "@shared": "./src/app/shared",
+        "@core": "./src/app/core",
+        "@assets": "./src/assets",
+        "@routes": "./src/app/routes"
+      }
+    }]
+  ]
+
+}

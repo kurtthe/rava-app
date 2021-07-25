@@ -1,0 +1,35 @@
+// generic
+@import "generic/normalize.scss";
+@import "generic/box-sizing.scss";
+
+// settings
+@import "settings/colors.scss";
+@import "settings/typography.scss";
+@import "settings/sizes.scss";
+
+// elements
+@import "elements/body.scss";
+@import "elements/textinput.scss";
+@import "elements/typography.scss";
+@import "elements/select.scss";
+
+// components
+@import "components/layout.scss";
+@import "components/upload-file.scss";
+@import "components/header.scss";
+@import "components/content-video.scss";
+@import "components/content-tools.scss";
+@import "components/dropzone.scss";
+@import "components/tabs.scss";
+@import "components/timer.scss";
+@import "components/export.scss";
+@import "components/content-timeline.scss";
+
+// utilities
+@import "utilities/buttons.scss";
+@import "utilities/flexbox.scss";
+@import "utilities/overflow.scss";
+@import "utilities/size.scss";
+@import "utilities/textinput.scss";
+@import "utilities/typography.scss";
+@import "utilities/margins.scss";

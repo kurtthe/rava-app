@@ -1,0 +1,24 @@
+.sign-up{
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content:center;
+  margin: auto;
+  width: 30vw;
+
+  &__content{
+    margin-top: 10px;
+    display: flex;
+    flex-direction:column
+  }
+
+  &__link{
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+  }
+
+  & input{
+    border: none;
+  }
+}
