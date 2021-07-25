@@ -1,7 +1,7 @@
 import axios from 'axios'
 
-import { urlServicer } from './interface.url'
-import UrlsServices from './urlsServices'
+import { urlServicer } from '../../shared/interfaces/interface.url'
+import UrlsServices from '../../shared/dictionaries/urlsServices'
 
 import Alert from '../shared/module/Alert'
 

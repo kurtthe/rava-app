@@ -1,7 +1,7 @@
 import React, { useState, useRef } from "react";
 
-import ProfileImage from "../assets/img/profile.png";
-import ProfileCover from "../assets/img/profile-cover.png";
+import ProfileImage from "../../assets/img/profile.png";
+import ProfileCover from "../../assets/img/profile-cover.png";
 
 import { AntDesign } from "react-web-vector-icons";
 

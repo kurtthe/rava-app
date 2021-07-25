@@ -2,7 +2,7 @@
 import React from 'react';
 import Lottie from 'react-lottie';
 
-import animation404 from '../assets/lotties/404.json';
+import animation404 from '../../assets/lotties/404.json';
 
 const defaultOptions = {
   loop: true,

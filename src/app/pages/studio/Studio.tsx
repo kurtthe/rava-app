@@ -1,10 +1,10 @@
 import React from "react";
 
-import Header from "../../components/Header";
+import Header from "../../custom-sections/Header";
 
-import ContentVideo from "./components/ContentVideo";
-import Tools from "./components/ContentTools";
-import ContentTimeline from "./components/ContentTimeline";
+import ContentVideo from "../../custom-sections/ContentVideo";
+import Tools from "../../custom-sections/ContentTools";
+import ContentTimeline from "../../custom-sections/ContentTimeline";
 
 import "./studio.scss";
 

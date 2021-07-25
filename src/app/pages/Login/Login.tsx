@@ -1,14 +1,14 @@
 import React from "react";
 
-import Layout from "../../components/Layout";
-import HeaderMini from "../../components/HeaderMini";
+import Layout from "../../custom-sections/Layout";
+import HeaderMini from "../../custom-sections/HeaderMini";
 
-import TextInput from "../../components/TextInput";
-import Button from "../../components/Button";
+import TextInput from "../../custom-elements/TextInput";
+import Button from "../../custom-elements/Button";
 
 import { Link } from "react-router-dom";
 
-import ImageRigth from "../../assets/img/bg_login.png";
+import ImageRigth from "../../../assets/img/bg_login.png";
 
 import "./login.scss";
 

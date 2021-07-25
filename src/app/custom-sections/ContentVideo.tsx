@@ -1,6 +1,6 @@
 import React from "react";
 
-import DropZone from "../../../components/DropZone";
+import DropZone from "../custom-elements/DropZone";
 
 const ContentVideo = (props) => {
   return (
