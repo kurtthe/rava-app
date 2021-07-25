@@ -18,9 +18,6 @@ const Studio = () => {
           <ContentVideo />
           <Tools />
         </div>
-        <div className="studio__timeline">
-          <ContentTimeline />
-        </div>
       </div>
     </>
   );
