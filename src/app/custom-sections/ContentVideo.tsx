@@ -1,13 +1,11 @@
 import React from "react";
 
-import DropZone from "@custom-elements/DropZone";
-
 const ContentVideo = (props) => {
   return (
     <>
       <div className="content-video">
-        <div className="content-video-center">
-          <DropZone />
+        <div className="content-video__content">
+          <p>here video player</p>
         </div>
       </div>
     </>
