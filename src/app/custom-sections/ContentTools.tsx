@@ -1,6 +1,6 @@
 import React from "react";
 
-import Tabs from "../custom-elements/Tabs";
+import Tabs from "@custom-elements/Tabs";
 
 import Timer from "./Timer";
 import Export from "./Export";

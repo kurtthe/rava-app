@@ -1,12 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-import Layout from "../../custom-sections/Layout";
-import HeaderMini from "../../custom-sections/HeaderMini";
-import TextInput from "../../custom-elements/TextInput";
-import Button from "../../custom-elements/Button";
+import Layout from "@custom-sections/Layout";
+import HeaderMini from "@custom-sections/HeaderMini";
+import TextInput from "@custom-elements/TextInput";
+import Button from "@custom-elements/Button";
 
-import ImageRigth from "../../../assets/img/bg_signup.png";
+import ImageRigth from "@assets/img/bg_signup.png";
 
 import "./sign-up.scss";
 

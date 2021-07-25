@@ -22,8 +22,14 @@
 		"allowSyntheticDefaultImports": true,
 		"esModuleInterop": true,
 		"paths": {
-      "@components": ["src/infrastructure/web/components/*"],
-      "@pages/*": ["src/infrastructure/web/pages/*"]
+      "@custom-elements/*": ["src/app/custom-elements/*"],
+      "@custom-sections/*": ["src/app/custom-sections/*"],
+      "@shared/*": ["src/app/shared/*"],
+      "@routes/*": ["src/app/routes/*"],
+      "@assets/*": ["src/assets/*"],
+      "@core/*": ["src/app/core/*"],
+      "@pages/*": ["src/app/pages/*"],
+      "@env": ["src/environments/environment"],
     }
 	},
 	"exclude": ["node_modules"],

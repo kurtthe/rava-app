@@ -1,8 +1,8 @@
 import React from "react";
 
-import UploadFile from "../custom-elements/UploadFile";
+import UploadFile from "@custom-elements/UploadFile";
 
-import LogoCamera from "../../assets/img/camera.png";
+import LogoCamera from "@assets/img/camera.png";
 
 const Timer = () => {
   return (

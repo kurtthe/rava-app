@@ -1,16 +1,14 @@
-import React from "react";
+import React from 'react';
 
-import Layout from "../../custom-sections/Layout";
-import HeaderMini from "../../custom-sections/HeaderMini";
+import { Link } from 'react-router-dom';
 
-import TextInput from "../../custom-elements/TextInput";
-import Button from "../../custom-elements/Button";
+import HeaderMini from '@custom-sections/HeaderMini';
+import ImageRigth from '@assets/img/bg_login.png';
+import Layout from '@custom-sections/Layout';
+import Button from '@custom-elements/Button';
+import TextInput from '@custom-elements/TextInput';
 
-import { Link } from "react-router-dom";
-
-import ImageRigth from "../../../assets/img/bg_login.png";
-
-import "./login.scss";
+import './login.scss';
 
 const Login = () => {
   return (
@@ -38,7 +36,13 @@ const Login = () => {
             <Link to="/forget-password" className="link t-a-right leading-0">
               Forgot Password?
             </Link>
-            <Button mode="contained" className="mt-12" label="Login" onClick={() => null} type="primary" />
+            <Button
+              mode="contained"
+              className="mt-12"
+              label="Login"
+              onClick={() => null}
+              type="primary"
+            />
           </div>
           <div className="login__footer">
             <p className="t-a-center">
