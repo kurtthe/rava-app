@@ -8,5 +8,7 @@ $fonts_name: "Archivo", "Archivo-SemiBold";
   }
 }
 
-$font_primary: "Archivo", sans-serif;
-$font_primary_semi: "Archivo-SemiBold", sans-serif;
+:root{
+  --font_primary: "Archivo", sans-serif;
+  --font_primary_semi: "Archivo-SemiBold", sans-serif;
+}

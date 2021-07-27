@@ -1,7 +1,7 @@
 body {
   margin: 0;
-  background-color: $bg_color;
-  font-family: $font_primary;
+  background-color: var(--bg_color);
+  font-family: var(--font_primary);
   overflow-x: hidden;
 }
 

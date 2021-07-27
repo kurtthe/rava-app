@@ -2,14 +2,14 @@
   padding: 15px 5px;
   & select{
     background-color: transparent;
-    color: $color_paragraph;
+    color: var(--color_paragraph);
     margin-top: 5px;
     margin-bottom: 20px;
   }
 
   & input{
     background-color: transparent;
-    color: $color_paragraph;
+    color: var(--color_paragraph);
     width: 90% !important;
   }
 

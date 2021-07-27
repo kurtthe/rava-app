@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-import Tab from "./Tab";
+import Tab from "./tab/Tab";
 
 
 const Tabs = (props: any) => {

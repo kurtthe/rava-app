@@ -1,9 +1,9 @@
 %btn {
   padding: 12px;
-  font-family: $font_primary;
+  font-family: var(--font_primary);
   font-size: 20px;
   text-transform: uppercase;
-  color: $color_label_btn_default;
+  color: var(--color_label_btn_default);
   border: none;
   border-radius: 5px;
   &:hover {
@@ -24,22 +24,22 @@
 // contained
 .btn-contained-primary {
   @extend %btn;
-  background-color: $color_primary_btn;
+  background-color: var(--color_primary_btn);
 }
 .btn-contained-secondary {
   @extend %btn;
-  background-color: $color_primary_btn;
+  background-color: var(--color_primary_btn);
 }
 
 // outlines
 .btn-outline-primary {
   @extend %btn_outline;
-  color: $color_primary_btn;
-  border: 1.5px solid $color_primary_btn;
+  color: var(--color_primary_btn);
+  border: 1.5px solid var(--color_primary_btn);
 }
 
 .btn-outline-secondary {
   @extend %btn_outline;
-  border: 1.5px solid $color_secondary_btn;
-  color: $color_secondary_btn;
+  border: 1.5px solid var(--color_secondary_btn);
+  color: var(--color_secondary_btn);
 }

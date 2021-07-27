@@ -5,8 +5,8 @@
 .tab-list {
   padding-left: 0;
   font-size: 18px;
-  font-family: $font_primary;
-  color: $color_paragraph;
+  font-family: (--font_primary);
+  color: var(--color_paragraph);
   font-weight: 700;
   display: flex;
   flex-wrap: wrap;

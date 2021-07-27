@@ -1,6 +1,6 @@
 import React from "react";
 
-import Header from "@custom-sections/Header";
+import Header from "@custom-sections/header/Header";
 
 import ContentVideo from "@custom-sections/content-video/ContentVideo";
 import Tools from "@custom-sections/content-tools/ContentTools";

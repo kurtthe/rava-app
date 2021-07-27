@@ -4,7 +4,7 @@
   flex-direction: row;
   align-items:center;
   justify-content: space-between;
-  background-color: $bg_color_studio;
+  background-color: var(--bg_color_studio);
   
   &__content {
     width: 50%;
@@ -28,8 +28,8 @@
 
         li {
           padding: 12px;
-          color: $color_paragraph;
-          font-family: $font_primary;
+          color: var(--color_paragraph);
+          font-family: var(--font_primary);
           font-size: 16px;
           &:hover{
             cursor: pointer;

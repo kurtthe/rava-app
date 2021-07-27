@@ -1,9 +1,9 @@
 import React from "react";
 
-import Tabs from "@custom-elements/Tabs";
+import Tabs from "@custom-elements/tabs/Tabs";
 
-import Timer from "./Timer";
-import UploadAssets from './UploadAssets'
+import Timer from "@custom-sections/timers/Timers";
+import UploadAssets from '@custom-sections/upload-assets/UploadAssets'
 
 import './content-tools.scss'
 
