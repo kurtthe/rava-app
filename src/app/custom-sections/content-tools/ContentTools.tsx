@@ -13,7 +13,6 @@ const Tools = (props: any) => {
       <div className="content-tools">
         <Tabs>
           <div label="Assets">
-            <h2>this section upload videos jajajaj</h2>
             <UploadAssets />
           </div>
 

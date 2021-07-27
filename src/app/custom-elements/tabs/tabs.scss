@@ -2,27 +2,3 @@
   padding: 5px 15px;
 }
 
-.tab-list {
-  padding-left: 0;
-  font-size: 18px;
-  font-family: (--font_primary);
-  color: var(--color_paragraph);
-  font-weight: 700;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 2rem;
-  &:hover {
-    cursor: pointer;
-  }
-
-  &-item {
-    display: inline-block;
-    list-style: none;
-  }
-
-  &-active {
-    color: white;
-  }
-
-}

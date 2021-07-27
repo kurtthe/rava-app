@@ -1,5 +1,6 @@
 import React from "react";
 
+import './tab.scss';
 interface Props {
   activeTab: string;
   label: string;

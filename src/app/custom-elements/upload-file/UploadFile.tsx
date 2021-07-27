@@ -5,20 +5,30 @@ import ProfileCover from "@assets/img/profile-cover.png";
 
 import { AntDesign } from "react-web-vector-icons";
 
+import {AcceptingFiles} from '@shared/enums/accepting-files.enum';
+
+import './upload-file.scss';
 interface Props {
-  type: "basic" | "cover" | "preview";
+  type: 'basic' | 'cover' | 'preview';
   label: string;
+  permit: AcceptingFiles;
   titleInfo?: string;
   detailsInfo?: string;
   onChangeFile?: () => void;
 }
 
+const acceptingFile = {
+  [AcceptingFiles.Images]: 'image/png, image/gif, image/jpeg',
+  [AcceptingFiles.Videos]: 'video/mp4, video/x-m4v, video/*',
+  [AcceptingFiles.Audios]: 'audio/*'
+}
+
 const UploadFile = (props: Props) => {
   const hiddenFileInput = useRef(null);
   const [imageUpload, setImageUpload] = useState("");
-
+  
   const handleClick = () => {
-    if (null != hiddenFileInput.current) {
+    if (null !== hiddenFileInput.current) {
       hiddenFileInput.current.click();
     }
   };
@@ -64,7 +74,7 @@ const UploadFile = (props: Props) => {
             {!props.detailsInfo ? null : (
               <p className={`upload-${props.type}__details`}>{props.detailsInfo}</p>
             )}
-            <input ref={hiddenFileInput} type="file" onChange={handleChangeFile} />
+            <input ref={hiddenFileInput} type="file" onChange={handleChangeFile} accept={acceptingFile[props.permit]} />
             <button onClick={handleClick} className={`upload-${props.type}__btn`}>
               <AntDesign name="plus" color="#1F2044" size={20} />
               {props.label}
@@ -93,7 +103,7 @@ const UploadFile = (props: Props) => {
           <p className={`upload-${props.type}__details`}>{props.detailsInfo}</p>
         )}
 
-        <input ref={hiddenFileInput} type="file" onChange={handleChangeFile} />
+        <input ref={hiddenFileInput} type="file" onChange={handleChangeFile} accept={acceptingFile[props.permit]} />
         <button onClick={handleClick} className={`upload-${props.type}__btn`}>
           <AntDesign name="plus" color="#1F2044" size={20} />
           {props.label}

@@ -2,6 +2,7 @@ import React, { useState } from "react";
 
 import Tab from "./tab/Tab";
 
+import './tabs.scss';
 
 const Tabs = (props: any) => {
   const [activeTab, setActiveTab] = useState(props.children[0].props.label);

@@ -7,6 +7,7 @@ import TextInput from "@custom-elements/textinput/TextInput";
 import Button from "@custom-elements/button/Button";
 
 import ImageRigth from "@assets/img/bg_signup.png";
+import {AcceptingFiles} from '@shared/enums/accepting-files.enum'
 
 import "./profile.scss";
 
@@ -24,6 +25,7 @@ const Profile = (props: Props) => {
               label="Upload picture"
               titleInfo="Add your profile photo"
               detailsInfo="Add your photo for Trainer Account"
+              permit={AcceptingFiles.Images}
             />
 
             <UploadFile
@@ -31,6 +33,7 @@ const Profile = (props: Props) => {
               label="Upload picture"
               titleInfo="Add your cover photo"
               detailsInfo="Add cover photo for Trainer Account (min. 2mb)"
+              permit={AcceptingFiles.Images}
             />
 
             <TextInput
