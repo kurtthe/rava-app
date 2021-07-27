@@ -14,7 +14,7 @@
     ["module-resolver", {
       "root": ["./src"],
       "alias": {
-        "@env": "./src/environments",
+        "@env": "./src/environments/environments",
         "@custom-elements": "./src/app/custom-elements",
         "@custom-sections": "./src/app/custom-sections",
         "@pages": "./src/app/pages",

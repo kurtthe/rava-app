@@ -29,7 +29,7 @@
       "@assets/*": ["src/assets/*"],
       "@core/*": ["src/app/core/*"],
       "@pages/*": ["src/app/pages/*"],
-      "@env": ["src/environments/environment"],
+      "@env": ["src/environments/environments"],
     }
 	},
 	"exclude": ["node_modules"],
