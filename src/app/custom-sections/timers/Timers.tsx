@@ -1,6 +1,8 @@
 import React from "react";
 
-const Timer = () => {
+import './timers'
+
+const Timers = () => {
   return (
     <>
       <div className="timer">
@@ -10,4 +12,4 @@ const Timer = () => {
   );
 };
 
-export default Timer;
+export default Timers;

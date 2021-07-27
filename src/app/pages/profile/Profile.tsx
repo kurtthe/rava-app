@@ -1,10 +1,10 @@
 import React from "react";
 
-import Layout from "@custom-sections/Layout";
-import HeaderMini from "@custom-sections/HeaderMini";
-import UploadFile from "@custom-elements/UploadFile";
-import TextInput from "@custom-elements/TextInput";
-import Button from "@custom-elements/Button";
+import Layout from "@custom-sections/layout/Layout";
+import HeaderMini from "@custom-sections/header-mini/HeaderMini";
+import UploadFile from "@custom-elements/upload-file/UploadFile";
+import TextInput from "@custom-elements/textinput/TextInput";
+import Button from "@custom-elements/button/Button";
 
 import ImageRigth from "@assets/img/bg_signup.png";
 

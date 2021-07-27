@@ -2,11 +2,11 @@ import React from 'react';
 
 import { Link } from 'react-router-dom';
 
-import HeaderMini from '@custom-sections/HeaderMini';
+import HeaderMini from '@custom-sections/header-mini/HeaderMini';
 import ImageRigth from '@assets/img/bg_login.png';
-import Layout from '@custom-sections/Layout';
-import Button from '@custom-elements/Button';
-import TextInput from '@custom-elements/TextInput';
+import Layout from '@custom-sections/layout/Layout';
+import Button from '@custom-elements/button/Button';
+import TextInput from '@custom-elements/textinput/TextInput';
 
 import './login.scss';
 

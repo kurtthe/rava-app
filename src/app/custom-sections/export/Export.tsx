@@ -1,8 +1,10 @@
 import React from "react";
 
-import Select from "@custom-elements/Select";
-import TextInput from "@custom-elements/TextInput";
-import Button from "@custom-elements/Button";
+import Select from "@custom-elements/selec/Select";
+import TextInput from "@custom-elements/textinput/TextInput";
+import Button from "@custom-elements/button/Button";
+
+import './export'
 
 const Export = () => {
   return (

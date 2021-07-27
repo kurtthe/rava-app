@@ -3,6 +3,9 @@ import React from "react";
 import Tabs from "@custom-elements/Tabs";
 
 import Timer from "./Timer";
+import UploadAssets from './UploadAssets'
+
+import './content-tools.scss'
 
 const Tools = (props: any) => {
   return (
@@ -11,6 +14,7 @@ const Tools = (props: any) => {
         <Tabs>
           <div label="Assets">
             <h2>this section upload videos jajajaj</h2>
+            <UploadAssets />
           </div>
 
           <div label="Timers">

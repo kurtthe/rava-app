@@ -1,21 +1,23 @@
-// bg
-$bg_color: #111226;
-$bg_color_secondary: #1F2044;
-$bg_color_studio: #111226;
-$bg_color_secondary_studio: #111226;
+:root {
+  // bg
+  --bg_color: #111226;
+  --bg_color_secondary: #1F2044;
+  --bg_color_studio: #111226;
+  --bg_color_secondary_studio: #111226;
 
-// text_colors
-$color_paragraph: #7D7E93;
-$color_secondary: #7D7E93;
-$color_primary_paragraph: #D9A900;
+  // text_colors
+  --color_paragraph: #7D7E93;
+  --color_secondary: #7D7E93;
+  --color_primary_paragraph: #D9A900;
 
-// buttons
-$color_primary_btn: #D9A900;
-$color_secondary_btn: #fff;
-$color_label_btn_default: #fff;
+  // buttons
+  --color_primary_btn: #D9A900;
+  --color_secondary_btn: #fff;
+  --color_label_btn_default: #fff;
 
-// textinput 
-$bg_color_textinput: #414160;
-$color_textinput_border: #7D7E93;
-$color_textinput: #fff;
-$color_label_textinput: #fff;
+  // textinput 
+  --bg_color_textinput: #414160;
+  --color_textinput_border: #7D7E93;
+  --color_textinput: #fff;
+  --color_label_textinput: #fff;
+}

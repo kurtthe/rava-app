@@ -1,5 +1,7 @@
 import React from "react";
 
+import './layout.scss'
+
 interface Props {
   imageRigth: string;
   children: any;

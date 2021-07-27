@@ -1,5 +1,7 @@
 import React from "react";
 
+import './content-video.scss'
+
 const ContentVideo = (props) => {
   return (
     <>

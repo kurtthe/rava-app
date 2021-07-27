@@ -1,7 +1,9 @@
 import React from "react";
 import Logo from "@assets/img/logo.png";
 import Profile from "@assets/img/profile.png";
-import Button from "@custom-elements/Button";
+import Button from "@custom-elements/button/Button";
+
+import './header.scss'
 
 const Header = () => {
   return (
