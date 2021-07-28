@@ -21,6 +21,18 @@
     cursor: pointer;
   }
 }
+
+%btn_rounded{
+  padding:8px 15px;
+  border: none;
+  border-radius: 18px;
+  font-size: 18px;
+  
+  &:hover{
+    cursor: pointer;
+  }
+}
+
 // contained
 .btn-contained-primary {
   @extend %btn;
@@ -40,6 +52,21 @@
 
 .btn-outline-secondary {
   @extend %btn_outline;
+  border: 1.5px solid var(--color_secondary_btn);
+  color: var(--color_secondary_btn);
+}
+// rounded
+
+.btn-rounded-primary{
+  @extend %btn_rounded;
+  background-color: var(--color_primary_btn);
+  border: 1.5px solid var(--color_primary_btn);
+  color: #1F2044;
+}
+
+
+.btn-rounded-secondary {
+  @extend %btn_rounded;
   border: 1.5px solid var(--color_secondary_btn);
   color: var(--color_secondary_btn);
 }

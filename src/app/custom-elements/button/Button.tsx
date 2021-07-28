@@ -1,7 +1,7 @@
 import React from "react";
 
 interface Props {
-  mode: "outline" | "contained";
+  mode: "outline" | "contained" | "rounded";
   type: "primary" | "secondary" | "warning" | "info";
   label: string;
   onClick: (event?: any) => void;

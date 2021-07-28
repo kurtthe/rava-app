@@ -9,7 +9,7 @@ interface Props {
 
 const ContentVideo = (props: Props) => {
 
-  const urlFile = (!props.video)?false: URL.createObjectURL(props.video);
+  const urlFile = (!props.video)? '' : URL.createObjectURL(props.video);
 
   
   return (
@@ -17,7 +17,7 @@ const ContentVideo = (props: Props) => {
       <div className="content-video">
         <div className="content-video__content">
           {(!props.video)?<p>here video player</p>:(
-            <video width="100%" controls>
+            <video width="100%" height="100%" controls>
             <source src={urlFile} />
           </video>
           )}
