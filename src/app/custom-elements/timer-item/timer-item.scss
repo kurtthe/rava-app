@@ -1,0 +1,22 @@
+.timer{
+  padding: 10px 5px;
+  display: flex;
+  flex-direction: column;
+  border-bottom: 1px solid white;
+  &__info{
+    display: flex;
+    align-items: center;
+    justify-content:space-around;
+
+    p{
+      font-size: 17px;
+      margin: 5px;
+    }
+
+    .btn-delete{
+      padding: 5px;
+      font-size: 12px;
+    }
+  }
+ 
+}

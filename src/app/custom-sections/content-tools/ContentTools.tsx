@@ -12,13 +12,14 @@ const Tools = (props: any) => {
     <>
       <div className="content-tools">
         <Tabs>
-          <div label="Assets">
-            <UploadAssets />
-          </div>
-
           <div label="Timers">
             <Timer />
           </div>
+
+          <div label="Assets">
+            <UploadAssets />
+          </div>
+          
         </Tabs>
       </div>
     </>
