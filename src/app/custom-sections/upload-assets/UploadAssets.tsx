@@ -5,23 +5,18 @@ import {AcceptingFiles} from '@shared/enums/accepting-files.enum'
 import './upload-assets.scss';
 
 import {Props, State} from '@shared/interfaces/upload-assets.interface'
+import AssetUpload from '@custom-elements/asset-upload/AssetUpload'
 
-import {GeneralRequest} from '@core/services/general-request.service'
-import {endPoints} from '@shared/dictionaries/end-points/end-points'
-
+import { connect } from 'react-redux'
+import {uploadVideo} from '@core/module/store/studio/actions'
 class UploadAssets extends Component<Props, State> {
 
-  constructor(
-    private readonly generalRequest:GeneralRequest,
-    props:Props
-    ){
+  constructor(props:Props){
     super(props);
-
   }
   
-  private handleUploadFile = ()=>{
-    console.log("===>upload")
-    this.generalRequest.post(endPoints.uploadFile, {})
+  private handleUploadFile = (Video:File):void=>{
+    this.props.uploadVideo(Video)
   }
 
   render(){
@@ -29,12 +24,18 @@ class UploadAssets extends Component<Props, State> {
       <div className="upload-assets">
   
         <div className="upload-assets__content">
-          <h2>content upload</h2>
+          <div className="upload-assets__content-item">
+            {
+              (!this.props.video)? <p>Nothing upload yet.</p>:(
+                <AssetUpload typeAsset={AcceptingFiles.Videos} file={this.props.video} />
+              )
+            }
+          </div>
         </div>
   
         <div className="upload-assets__footer">
           <div className="upload-assets-item">
-            <UploadFiles type="basic" label="Upload Video" onChangeFile={() => this.handleUploadFile()} permit={AcceptingFiles.Videos} />
+            <UploadFiles type="basic" label="Upload Video" onChangeFile={(videoUrl) => this.handleUploadFile(videoUrl)} permit={AcceptingFiles.Videos} />
           </div>
         </div>
       </div>
@@ -43,4 +44,12 @@ class UploadAssets extends Component<Props, State> {
   
 };
 
-export default UploadAssets;
+const mapStateToProps = (reducers:any) => {
+  return reducers.StudioReducer
+}
+
+const mapDispatchToProps = (dispatch:any) => ({
+  uploadVideo: (payload:any) => dispatch(uploadVideo(payload)),
+})
+
+export default connect(mapStateToProps, mapDispatchToProps)(UploadAssets)

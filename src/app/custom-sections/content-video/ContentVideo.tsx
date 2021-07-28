@@ -1,17 +1,35 @@
 import React from "react";
 
 import './content-video.scss'
+import { connect } from 'react-redux'
 
-const ContentVideo = (props) => {
+interface Props {
+  video:File
+}
+
+const ContentVideo = (props: Props) => {
+
+  const urlFile = (!props.video)?false: URL.createObjectURL(props.video);
+
+  
   return (
     <>
       <div className="content-video">
         <div className="content-video__content">
-          <p>here video player</p>
+          {(!props.video)?<p>here video player</p>:(
+            <video width="100%" controls>
+            <source src={urlFile} />
+          </video>
+          )}
         </div>
       </div>
     </>
   );
 };
 
-export default ContentVideo;
+
+const mapStateToProps = (reducers:any) => {
+  return reducers.StudioReducer
+}
+
+export default connect(mapStateToProps)(ContentVideo)

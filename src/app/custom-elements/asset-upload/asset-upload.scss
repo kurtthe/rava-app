@@ -1,0 +1,20 @@
+.asset{
+  padding: 5px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  &__preview{
+    width: 40%;
+  }
+
+  &__info{
+    width: 50%;
+
+    p {
+      font-size: 14px;
+      margin: 5px;
+    }
+  }
+}

@@ -1,5 +1,5 @@
 export enum AcceptingFiles {
-  Images = 'images',
-  Videos = 'videos',
-  Audios = 'audios',
+  Images = 'image/png, image/gif, image/jpeg',
+  Videos = 'video/mp4, video/x-m4v, video/*',
+  Audios = 'audio/*',
 }

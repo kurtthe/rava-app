@@ -14,18 +14,14 @@ interface Props {
   permit: AcceptingFiles;
   titleInfo?: string;
   detailsInfo?: string;
-  onChangeFile?: () => void;
-}
-
-const acceptingFile = {
-  [AcceptingFiles.Images]: 'image/png, image/gif, image/jpeg',
-  [AcceptingFiles.Videos]: 'video/mp4, video/x-m4v, video/*',
-  [AcceptingFiles.Audios]: 'audio/*'
+  onChangeFile?: (file:File) => void;
 }
 
 const UploadFile = (props: Props) => {
   const hiddenFileInput = useRef(null);
   const [imageUpload, setImageUpload] = useState("");
+
+  console.log("==>AcceptingFiles.Images",AcceptingFiles.Images)
   
   const handleClick = () => {
     if (null !== hiddenFileInput.current) {
@@ -35,11 +31,9 @@ const UploadFile = (props: Props) => {
 
   const handleChangeFile = (event: any) => {
     const urlImage = URL.createObjectURL(event.target.files[0]);
-
-    console.log("event.target.files", urlImage);
     setImageUpload(urlImage);
 
-    props.onChangeFile && props.onChangeFile();
+    props.onChangeFile && props.onChangeFile(event.target.files[0]);
   };
 
   const putContent = () => {
@@ -74,7 +68,7 @@ const UploadFile = (props: Props) => {
             {!props.detailsInfo ? null : (
               <p className={`upload-${props.type}__details`}>{props.detailsInfo}</p>
             )}
-            <input ref={hiddenFileInput} type="file" onChange={handleChangeFile} accept={acceptingFile[props.permit]} />
+            <input ref={hiddenFileInput} type="file" onChange={handleChangeFile} accept={props.permit} />
             <button onClick={handleClick} className={`upload-${props.type}__btn`}>
               <AntDesign name="plus" color="#1F2044" size={20} />
               {props.label}
@@ -103,7 +97,7 @@ const UploadFile = (props: Props) => {
           <p className={`upload-${props.type}__details`}>{props.detailsInfo}</p>
         )}
 
-        <input ref={hiddenFileInput} type="file" onChange={handleChangeFile} accept={acceptingFile[props.permit]} />
+        <input ref={hiddenFileInput} type="file" onChange={handleChangeFile} accept={props.permit} />
         <button onClick={handleClick} className={`upload-${props.type}__btn`}>
           <AntDesign name="plus" color="#1F2044" size={20} />
           {props.label}
