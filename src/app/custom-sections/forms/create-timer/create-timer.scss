@@ -1,0 +1,29 @@
+%input {
+  background-color: white;
+  border-radius: 2px;
+  padding: 5px;
+  margin: 5px;
+  color: #000;
+}
+
+.create-timer{
+  padding: 5px;
+  .input{
+    &-sml{
+     @extend %input;
+     width: 25%;
+    }
+
+    &-md{
+     @extend %input;
+     width: 30%;
+    }
+  }
+  
+  &__row{
+    padding:5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}

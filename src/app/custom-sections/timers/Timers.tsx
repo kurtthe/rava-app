@@ -3,9 +3,13 @@ import Button from '@custom-elements/button/Button'
 
 import Timer from '@custom-elements/timer-item/TimerItem'
 import Modal from '@custom-elements/modal/Modal'
+import CreateTimer from '@custom-sections/forms/create-timer/CreateTimer'
+
+import { connect } from 'react-redux'
+
 import './timers.scss'
 
-const Timers = () => {
+const Timers = (props:any) => {
 
   const [openModal, setOpenModal] = useState(false)
 
@@ -17,18 +21,31 @@ const Timers = () => {
     <>
       <div className="timers">
         <div className="timers__content">
-          <p>Nothing timers yet.</p>
-          <Timer />
+          { (props.timers.length === 0)? <p>Nothing timers yer.</p> :
+
+          props.timers.map((item:any)=> (
+            <Timer 
+              durations={item.duration} 
+              minutosInit={item.initMinutes} 
+              repeat={item.repeats} 
+            />
+          ))
+        }
         </div>
         <div className="timers__footer">
           <Button label="Create timer" type="primary" onClick={() => handleOpenModal()} mode="rounded" />
         </div>
       </div>
       <Modal open={openModal} closeModal={()=>setOpenModal(false)} >
-        <p>Aqui va el formulario para crear el timer</p>
+        <CreateTimer />
       </Modal>
     </>
   );
 };
 
-export default Timers;
+const mapStateToProps = (reducers:any) => {
+  return reducers.TimerReducer
+}
+
+export default connect(mapStateToProps)(Timers);
+
