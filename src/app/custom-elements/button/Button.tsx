@@ -20,7 +20,7 @@ const Button = (props: Props) => {
   }
   
   return (
-    <button className={classButton}>
+    <button className={classButton} onClick={(event)=>props.onClick(event)}>
       {props.label || "Button"}
     </button>
   );

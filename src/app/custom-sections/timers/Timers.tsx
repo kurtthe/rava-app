@@ -8,6 +8,10 @@ import './timers.scss'
 const Timers = () => {
 
   const [openModal, setOpenModal] = useState(false)
+
+  const handleOpenModal=()=>{
+    setOpenModal(true);
+  }
   
   return (
     <>
@@ -17,10 +21,12 @@ const Timers = () => {
           <Timer />
         </div>
         <div className="timers__footer">
-          <Button label="Create timer" type="primary" onClick={() => setOpenModal(true)} mode="rounded" />
+          <Button label="Create timer" type="primary" onClick={() => handleOpenModal()} mode="rounded" />
         </div>
       </div>
-      <Modal show={true} children={<p>Aqui va el formulario para crear el timer</p>} />
+      <Modal open={openModal} closeModal={()=>setOpenModal(false)} >
+        <p>Aqui va el formulario para crear el timer</p>
+      </Modal>
     </>
   );
 };
