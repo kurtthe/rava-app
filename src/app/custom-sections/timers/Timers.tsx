@@ -16,6 +16,8 @@ const Timers = (props:any) => {
   const handleOpenModal=()=>{
     setOpenModal(true);
   }
+
+  console.log("==<props.timers",props.timers)
   
   return (
     <>
@@ -23,8 +25,9 @@ const Timers = (props:any) => {
         <div className="timers__content">
           { (props.timers.length === 0)? <p>Nothing timers yer.</p> :
 
-          props.timers.map((item:any)=> (
+          props.timers.map((item:any, index:number)=> (
             <Timer 
+              key={index}
               durations={item.duration} 
               minutosInit={item.initMinutes} 
               repeat={item.repeats} 

@@ -1,7 +1,8 @@
 export interface Props{
   uploadVideo:any;
-  video:any
+  videosUpload:Array<File>;
 }
 
 export interface State {
+  videos:Array<File>;
 }

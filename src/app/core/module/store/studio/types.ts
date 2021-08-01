@@ -1,1 +1,1 @@
-export const UPLOAD_VIDEO = "upload_video"
+export const RENDER_VIDEO = "render_video"

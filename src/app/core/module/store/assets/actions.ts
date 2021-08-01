@@ -1,8 +1,10 @@
-import {RENDER_VIDEO} from './types'
+import { UPLOAD_VIDEO} from './types'
 
 export const uploadVideo = (urlVideo) => async (dispatch) => {
 	dispatch({
-		type: RENDER_VIDEO,
+		type: UPLOAD_VIDEO,
 		payload: urlVideo,
 	});
+
+	return urlVideo;
 };

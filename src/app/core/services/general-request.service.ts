@@ -1,6 +1,5 @@
 import axios from 'axios'
-import {GenericResponse} from '@shared/interfaces/responses-http.interface'
-import { Observable, from  } from 'rxjs';
+import { from  } from 'rxjs';
 import { first, retry } from 'rxjs/operators';
 
 
@@ -11,7 +10,7 @@ export class GeneralRequest {
     this.http = axios
   }
 
-  public post(endPoints:string, data:unknown):Observable<GenericResponse<any>> {
+  public post(endPoints:string, data:unknown) {
     return from(this.http.post(endPoints, data)).
       pipe(
       retry(1),
@@ -19,7 +18,7 @@ export class GeneralRequest {
     );
   }
 
-  public get(url:string, options:unknown):Observable<GenericResponse<any>> {
+  public get(url:string, options:unknown) {
     return from(this.http.get(url)).
     pipe(
     retry(1),

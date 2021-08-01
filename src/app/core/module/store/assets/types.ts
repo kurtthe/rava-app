@@ -1,0 +1,1 @@
+export const UPLOAD_VIDEO = "upload_video"

@@ -11,6 +11,7 @@ interface Props {
 const AssetUpload = (props: Props) => {
   const putContentPreview = () => {
     const urlFile = URL.createObjectURL(props.file);
+    console.log("==>urlFile",urlFile)
 
     switch (props.typeAsset) {
 
