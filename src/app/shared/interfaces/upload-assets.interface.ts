@@ -1,6 +1,7 @@
 export interface Props{
-  uploadVideo:any;
   videosUpload:Array<File>;
+  uploadVideo:(files:Array<File>)=>Array<File>;
+  videoRender: (file:File)=>void
 }
 
 export interface State {

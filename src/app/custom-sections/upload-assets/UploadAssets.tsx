@@ -12,6 +12,7 @@ import { uploadVideo } from '@core/module/store/assets/actions'
 import {ShotStackService} from '@core/services/shotstack-service'
 import {GeneralRequest} from '@core/services/general-request.service'
 import {endPoints} from '@shared/dictionaries/end-points/end-points'
+import {videoRender} from '@core/module/store/studio/actions'
 
 class UploadAssets extends Component<Props, State> {
   private shotStackService:ShotStackService
@@ -28,11 +29,11 @@ class UploadAssets extends Component<Props, State> {
     this.generalRequest = new GeneralRequest()
   }
   
-  private handleUploadFile = async (Video:File)=>{
+  private handleUploadFile = (Video:File)=>{
     const arry = this.state.videos;
     arry.push(Video)
 
-    const newVideo = await this.props.uploadVideo(arry);
+    const newVideo = this.props.uploadVideo(arry);
     this.setState({
       videos: newVideo
     })
@@ -42,13 +43,11 @@ class UploadAssets extends Component<Props, State> {
   }
 
   private petitionShotStack(data:any){
-    this.generalRequest.post(endPoints.renderShotstack, data).subscribe((response) => {
-      console.log("response=>",response)
-    })
+    const {videos} = this.state;
+    this.props.videoRender(videos[0]);
   }
 
   putContent=()=>{
-
     if(this.state.videos.length > 0){
       return this.state.videos.map((video, index)=>(
         <AssetUpload key={index} typeAsset={AcceptingFiles.Videos} file={video} />
@@ -82,7 +81,8 @@ const mapStateToProps = (reducers:any) => {
 }
 
 const mapDispatchToProps = (dispatch:any) => ({
-  uploadVideo: (payload:any) => dispatch(uploadVideo(payload)),
+  uploadVideo: (payload:Array<File>) => dispatch(uploadVideo(payload)),
+  videoRender: (payload:File) => dispatch(videoRender(payload))
 })
 
 export default connect(mapStateToProps, mapDispatchToProps)(UploadAssets)

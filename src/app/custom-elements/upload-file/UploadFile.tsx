@@ -1,11 +1,11 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useRef } from 'react';
 
-import ProfileImage from "@assets/img/profile.png";
-import ProfileCover from "@assets/img/profile-cover.png";
+import ProfileImage from '@assets/img/profile.png';
+import ProfileCover from '@assets/img/profile-cover.png';
 
-import { AntDesign } from "react-web-vector-icons";
+import { AntDesign } from 'react-web-vector-icons';
 
-import {AcceptingFiles} from '@shared/enums/accepting-files.enum';
+import { AcceptingFiles } from '@shared/enums/accepting-files.enum';
 
 import './upload-file.scss';
 interface Props {
@@ -14,15 +14,13 @@ interface Props {
   permit: AcceptingFiles;
   titleInfo?: string;
   detailsInfo?: string;
-  onChangeFile?: (file:File) => void;
+  onChangeFile?: (file: File) => void;
 }
 
 const UploadFile = (props: Props) => {
   const hiddenFileInput = useRef(null);
-  const [imageUpload, setImageUpload] = useState("");
+  const [imageUpload, setImageUpload] = useState('');
 
-  console.log("==>AcceptingFiles.Images",AcceptingFiles.Images)
-  
   const handleClick = () => {
     if (null !== hiddenFileInput.current) {
       hiddenFileInput.current.click();
@@ -37,7 +35,7 @@ const UploadFile = (props: Props) => {
   };
 
   const putContent = () => {
-    if (props.type === "basic") {
+    if (props.type === 'basic') {
       return (
         <>
           <input ref={hiddenFileInput} type="file" onChange={handleChangeFile} />
@@ -50,12 +48,12 @@ const UploadFile = (props: Props) => {
       );
     }
 
-    if (props.type === "preview") {
+    if (props.type === 'preview') {
       return (
         <>
           <div className={`upload-${props.type}__image`}>
             <img
-              src={imageUpload != "" ? imageUpload : ProfileImage}
+              src={imageUpload != '' ? imageUpload : ProfileImage}
               alt="Image Profile"
               width="116px"
               height="116px"
@@ -68,7 +66,12 @@ const UploadFile = (props: Props) => {
             {!props.detailsInfo ? null : (
               <p className={`upload-${props.type}__details`}>{props.detailsInfo}</p>
             )}
-            <input ref={hiddenFileInput} type="file" onChange={handleChangeFile} accept={props.permit} />
+            <input
+              ref={hiddenFileInput}
+              type="file"
+              onChange={handleChangeFile}
+              accept={props.permit}
+            />
             <button onClick={handleClick} className={`upload-${props.type}__btn`}>
               <AntDesign name="plus" color="#1F2044" size={20} />
               {props.label}
@@ -86,7 +89,7 @@ const UploadFile = (props: Props) => {
 
         <div className={`upload-${props.type}__image`}>
           <img
-            src={imageUpload != "" ? imageUpload : ProfileCover}
+            src={imageUpload != '' ? imageUpload : ProfileCover}
             alt="Image Profile"
             width="436px"
             height="116px"
@@ -97,7 +100,12 @@ const UploadFile = (props: Props) => {
           <p className={`upload-${props.type}__details`}>{props.detailsInfo}</p>
         )}
 
-        <input ref={hiddenFileInput} type="file" onChange={handleChangeFile} accept={props.permit} />
+        <input
+          ref={hiddenFileInput}
+          type="file"
+          onChange={handleChangeFile}
+          accept={props.permit}
+        />
         <button onClick={handleClick} className={`upload-${props.type}__btn`}>
           <AntDesign name="plus" color="#1F2044" size={20} />
           {props.label}
