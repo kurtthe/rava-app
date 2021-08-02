@@ -1,8 +1,8 @@
 import {CREATE_TIMER} from './types'
-import {Timer, Timers} from '@shared/interfaces/timers.interface'
+import {Timer, StateStoreTimers} from '@shared/interfaces/timers.interface'
 import {ActionsVideo} from '../interfaces/actions.interface'
 
-const INITIAL_STATE:Timers={
+const INITIAL_STATE:StateStoreTimers={
   timers: [],
 }
 

@@ -1,6 +1,8 @@
 import React from 'react';
 import ReactPlayer from 'react-player';
 import {ProgressVideo, Props} from '@shared/interfaces/video.interface'
+import {durationVideo} from '@core/module/store/studio/actions'
+import { connect } from 'react-redux'
 
 import './video.scss';
 
@@ -10,6 +12,10 @@ const Video = (props: Props) => {
     props.OnProgress(seconds);
   };
 
+  const handleDuration = (seconds:number)=>{
+    props.durationVideo(seconds)
+  }
+
   return (
     <ReactPlayer
       url={props.src}
@@ -17,8 +23,13 @@ const Video = (props: Props) => {
       height="100%"
       controls={true}
       onProgress={handleProgress}
+      onDuration={handleDuration}
     />
   );
 };
 
-export default Video;
+const mapDispatchToProps = (dispatch:any) => ({
+  durationVideo: (payload:number) => dispatch(durationVideo(payload)),
+})
+
+export default connect(null,mapDispatchToProps)(Video);

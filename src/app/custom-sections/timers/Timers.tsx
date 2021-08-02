@@ -7,6 +7,7 @@ import CreateTimer from '@custom-sections/forms/create-timer/CreateTimer'
 
 import { connect } from 'react-redux'
 import {Reducers} from '@shared/interfaces/reducers.interfaces'
+import {Timer as TimerInterface} from '@shared/interfaces/timers.interface'
 
 import './timers.scss'
 
@@ -23,13 +24,12 @@ const Timers = (props:any) => {
       <div className="timers">
         <div className="timers__content">
           { (props.timers.length === 0)? <p>Nothing timers yer.</p> :
-
-          props.timers.map((item:any, index:number)=> (
+          props.timers.map((item:TimerInterface, index:number)=> (
             <Timer 
               key={index}
               durations={item.duration} 
-              minutosInit={item.initMinutes} 
-              repeat={item.repeats} 
+              minutosInit={item.minutoInit} 
+              repeat={item.repeat} 
             />
           ))
         }

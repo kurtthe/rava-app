@@ -1,30 +1,51 @@
-import React from 'react';
+import React, {useState} from 'react';
 import Video from '@custom-elements/video/Video';
 import './content-video.scss';
 import { connect } from 'react-redux';
 import { ProgressVideo } from '@shared/interfaces/video.interface';
 import {Reducers} from '@shared/interfaces/reducers.interfaces'
+import {StateStoreTimers} from '@shared/interfaces/timers.interface'
+
+import Temporizador from '@custom-elements/temporizador/Temporizador'
 
 interface Props {
   studioReducer: any;
-  timerReducer: any
+  timerReducer: StateStoreTimers
 }
 
 const ContentVideo = (props: Props) => {
+  const [timerDuration, setTimerDuration] = useState(0)
   const urlFile = !props.studioReducer.video ? '' : URL.createObjectURL(props.studioReducer.video);
 
   const handleProgressVideo = (time: ProgressVideo) => {
-    console.log('??>time', time);
+    if(timerDuration > 0 && time.playedSeconds >= timerDuration){
+      initialTimer()
+    }
   };
+
+  const initialTimer = ()=>{
+
+    setInterval(()=>{
+      setTimerDuration(prevTimer => prevTimer - 1)
+    }, 1000)
+  }
+
+  const putContentTimer = ()=>{
+    if(props.timerReducer.timers.length > 0) { 
+      if(timerDuration < 1){
+        setTimerDuration(parseInt(props.timerReducer.timers[0].duration))
+      }
+
+      return <Temporizador timerDuration={timerDuration} />
+    }
+    return null;
+  }
 
   return (
     <>
       <div className="content-video">
-        <div className="content-video__content">
           <div className="content-video__header">
-            {
-              (props.timerReducer.timers.length > 0) && <div className="timer">0</div>
-            }
+            { putContentTimer() }
           </div>
           <div className="content-video__body">
             {!props.studioReducer.video ? (
@@ -33,7 +54,6 @@ const ContentVideo = (props: Props) => {
               <Video src={urlFile} OnProgress={(time) => handleProgressVideo(time)} />
             )}
           </div>
-        </div>
       </div>
     </>
   );
