@@ -1,10 +1,10 @@
 import { combineReducers } from 'redux';
-import StudioReducer from './studio/reducer'
-import TimerReducer from './timers/reducer'
-import AssetsReducer from './assets/reducer'
+import studioReducer from './studio/reducer'
+import timerReducer from './timers/reducer'
+import assetsReducer from './assets/reducer'
 
 export default combineReducers({
-  StudioReducer,
-  TimerReducer,
-  AssetsReducer
+  studioReducer,
+  timerReducer,
+  assetsReducer
 });

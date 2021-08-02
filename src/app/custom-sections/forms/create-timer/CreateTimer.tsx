@@ -2,6 +2,8 @@ import React, {useState} from 'react';
 import { connect } from 'react-redux'
 import {createTimer} from '@core/module/store/timers/actions'
 
+import {Timer} from '@shared/interfaces/timers.interface'
+import {Reducers} from '@shared/interfaces/reducers.interfaces'
 import './create-timer.scss'
 
 const createTimerForm = (props:any) => {
@@ -42,12 +44,12 @@ const createTimerForm = (props:any) => {
   );
 };
 
-const mapStateToProps = (reducers:any) => {
-  return reducers.StudioReducer
+const mapStateToProps = (reducers:Reducers) => {
+  return reducers.studioReducer
 }
 
 const mapDispatchToProps = (dispatch:any) => ({
-  createTimer: (payload:any) => dispatch(createTimer(payload)),
+  createTimer: (payload:Timer) => dispatch(createTimer(payload)),
 })
 
 

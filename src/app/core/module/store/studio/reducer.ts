@@ -1,10 +1,12 @@
 import {RENDER_VIDEO} from './types'
+import {stateVideo} from '../interfaces/studio.interface'
+import {ActionsVideo} from '../interfaces/actions.interface'
 
-const INITIAL_STATE={
+const INITIAL_STATE:stateVideo={
   video: '',
 }
 
-export default (state=INITIAL_STATE, action:any)=>{
+export default (state:stateVideo=INITIAL_STATE, action:ActionsVideo)=>{
 
   switch(action.type){
 

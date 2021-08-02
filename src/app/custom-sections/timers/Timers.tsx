@@ -6,6 +6,7 @@ import Modal from '@custom-elements/modal/Modal'
 import CreateTimer from '@custom-sections/forms/create-timer/CreateTimer'
 
 import { connect } from 'react-redux'
+import {Reducers} from '@shared/interfaces/reducers.interfaces'
 
 import './timers.scss'
 
@@ -17,8 +18,6 @@ const Timers = (props:any) => {
     setOpenModal(true);
   }
 
-  console.log("==<props.timers",props.timers)
-  
   return (
     <>
       <div className="timers">
@@ -46,8 +45,8 @@ const Timers = (props:any) => {
   );
 };
 
-const mapStateToProps = (reducers:any) => {
-  return reducers.TimerReducer
+const mapStateToProps = (reducers:Reducers) => {
+  return reducers.timerReducer
 }
 
 export default connect(mapStateToProps)(Timers);

@@ -3,13 +3,15 @@ import Video from '@custom-elements/video/Video';
 import './content-video.scss';
 import { connect } from 'react-redux';
 import { ProgressVideo } from '@shared/interfaces/video.interface';
+import {Reducers} from '@shared/interfaces/reducers.interfaces'
 
 interface Props {
-  StudioReducer: any;
+  studioReducer: any;
+  timerReducer: any
 }
 
 const ContentVideo = (props: Props) => {
-  const urlFile = !props.StudioReducer.video ? '' : URL.createObjectURL(props.StudioReducer.video);
+  const urlFile = !props.studioReducer.video ? '' : URL.createObjectURL(props.studioReducer.video);
 
   const handleProgressVideo = (time: ProgressVideo) => {
     console.log('??>time', time);
@@ -20,10 +22,12 @@ const ContentVideo = (props: Props) => {
       <div className="content-video">
         <div className="content-video__content">
           <div className="content-video__header">
-            <div className="timer">0</div>
+            {
+              (props.timerReducer.timers.length > 0) && <div className="timer">0</div>
+            }
           </div>
           <div className="content-video__body">
-            {!props.StudioReducer.video ? (
+            {!props.studioReducer.video ? (
               <p>here video player</p>
             ) : (
               <Video src={urlFile} OnProgress={(time) => handleProgressVideo(time)} />
@@ -35,8 +39,11 @@ const ContentVideo = (props: Props) => {
   );
 };
 
-const mapStateToProps = (reducers: any) => {
-  return { StudioReducer: reducers.StudioReducer };
+const mapStateToProps = (reducers: Reducers) => {
+  return { 
+    studioReducer: reducers.studioReducer,
+    timerReducer: reducers.timerReducer 
+  };
 };
 
 export default connect(mapStateToProps)(ContentVideo);

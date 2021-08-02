@@ -5,6 +5,7 @@ import Tabs from "@custom-elements/tabs/Tabs";
 import Timer from "@custom-sections/timers/Timers";
 import UploadAssets from '@custom-sections/upload-assets/UploadAssets'
 import { connect } from 'react-redux'
+import {Reducers} from '@shared/interfaces/reducers.interfaces'
 
 import './content-tools.scss'
 
@@ -33,8 +34,8 @@ const Tools = (props: any) => {
   );
 };
 
-const mapStateToProps = (reducers:any) => {
-  return reducers.AssetsReducer
+const mapStateToProps = (reducers:Reducers) => {
+  return reducers.assetsReducer
 }
 
 export default connect(mapStateToProps)(Tools);

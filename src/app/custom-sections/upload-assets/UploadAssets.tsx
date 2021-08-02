@@ -13,6 +13,7 @@ import {ShotStackService} from '@core/services/shotstack-service'
 import {GeneralRequest} from '@core/services/general-request.service'
 import {endPoints} from '@shared/dictionaries/end-points/end-points'
 import {videoRender} from '@core/module/store/studio/actions'
+import {Reducers} from '@shared/interfaces/reducers.interfaces'
 
 class UploadAssets extends Component<Props, State> {
   private shotStackService:ShotStackService
@@ -76,8 +77,8 @@ class UploadAssets extends Component<Props, State> {
   }
 };
 
-const mapStateToProps = (reducers:any) => {
-  return reducers.AssetsReducer
+const mapStateToProps = (reducers:Reducers) => {
+  return reducers.assetsReducer
 }
 
 const mapDispatchToProps = (dispatch:any) => ({
