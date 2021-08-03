@@ -15,6 +15,7 @@ interface Props {
 
 const ContentVideo = (props: Props) => {
   const [timerDuration, setTimerDuration] = useState(0)
+  const [finish, setFinish] = useState(false)
   const urlFile = !props.studioReducer.video ? '' : URL.createObjectURL(props.studioReducer.video);
 
   const handleProgressVideo = (time: ProgressVideo) => {
@@ -24,15 +25,16 @@ const ContentVideo = (props: Props) => {
   };
 
   const initialTimer = ()=>{
+    setTimerDuration(prevTimer => prevTimer - 1)
 
-    setInterval(()=>{
-      setTimerDuration(prevTimer => prevTimer - 1)
-    }, 1000)
+    if(timerDuration < 1){
+      setFinish(true)
+    }
   }
 
   const putContentTimer = ()=>{
     if(props.timerReducer.timers.length > 0) { 
-      if(timerDuration < 1){
+      if(timerDuration < 1 || !finish){
         setTimerDuration(parseInt(props.timerReducer.timers[0].duration))
       }
 
